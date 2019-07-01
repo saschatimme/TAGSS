@@ -4,6 +4,9 @@ Supplementary package for the summer school [Trieste Algebraic Geometry Summer S
 
 To get things started clone or download this repository and switch to this folder and instantiate the project.
 
+This needs Julia 1.1 installed. You can [download](https://julialang.org/downloads/) it from www.julialang.org. Please also see the [platform specific instructions](https://julialang.org/downloads/platform.html).
+
+If you are using Linux or Mac the following should work:
 ```
 # clone repository
 git clone https://github.com/saschatimme/TAGSS.git
