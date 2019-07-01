@@ -11,6 +11,6 @@ git clone https://github.com/saschatimme/TAGSS.git
 cd TAGSS
 # install all packages necessary
 julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate()'
-# start the repository and open the provided Jupyter notebook
-julia --project -e 'using TAGSS; ed_notebook();'
+# start the repository and open the provided Jupyter notebooks
+julia --project -e 'using TAGSS; notebooks();'
 ```

@@ -1,7 +1,7 @@
-export ed_notebook
+export notebooks
 
 import IJulia
 
-function ed_notebook()
-    IJulia.notebook(; dir=joinpath(@__DIR__, "..", "notebooks", "ed-degree.ipynb"))
+function notebooks()
+    IJulia.notebook(; dir=joinpath(@__DIR__, "..", "notebooks"))
 end
