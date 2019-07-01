@@ -342,8 +342,6 @@ version = "0.7.1"
 [[HomotopyContinuation]]
 deps = ["DoubleFloats", "DynamicPolynomials", "ElasticArrays", "FixedPolynomials", "LinearAlgebra", "MixedSubdivisions", "MultivariatePolynomials", "Parameters", "PrettyTables", "Printf", "ProjectiveVectors", "Random", "StaticArrays", "StaticPolynomials", "Test", "TreeViews"]
 git-tree-sha1 = "cf6ebaf7a44dee9e380d8fc59a9e73ba3bce3932"
-repo-rev = "1cda42a827114ecd20674dd5837a525399343786"
-repo-url = "https://github.com/JuliaHomotopyContinuation/HomotopyContinuation.jl.git"
 uuid = "f213a82b-91d6-5c5d-acf7-10f1c761b327"
 version = "1.0.0"
 
@@ -379,9 +377,9 @@ version = "0.6.3"
 
 [[ImageMagick]]
 deps = ["BinaryProvider", "ColorTypes", "FileIO", "FixedPointNumbers", "ImageCore", "InteractiveUtils", "Libdl", "Pkg", "Random"]
-git-tree-sha1 = "2bb39ea007cb81672547d171de3f40b4d6b8ba32"
+git-tree-sha1 = "6e1efa8bd5123e18a082c5580c7b8d4a287e1af4"
 uuid = "6218d12a-5da1-5696-b52f-db25d2ecc6d1"
-version = "0.7.4"
+version = "0.7.5"
 
 [[ImageTransformations]]
 deps = ["AxisAlgorithms", "ColorTypes", "ColorVectorSpace", "Colors", "CoordinateTransformations", "FixedPointNumbers", "IdentityRanges", "ImageCore", "Interpolations", "OffsetArrays", "StaticArrays"]
@@ -718,9 +716,9 @@ uuid = "1a1011a3-84de-559e-8e89-a11a2f7dc383"
 
 [[Showoff]]
 deps = ["Dates"]
-git-tree-sha1 = "03a819b222591508e452ae3ca0333657cf070cbc"
+git-tree-sha1 = "e032c9df551fb23c9f98ae1064de074111b7bc39"
 uuid = "992d4aef-0814-514b-bc4d-f2e9a6c4116f"
-version = "0.3.0"
+version = "0.3.1"
 
 [[SignedDistanceFields]]
 deps = ["Random", "Statistics", "Test"]
