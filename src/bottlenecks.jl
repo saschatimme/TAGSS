@@ -19,14 +19,17 @@ function bottleneck_equations(f::Vector{<:DP.AbstractPolynomial})
     I
 end
 
-
 """
     bottlenecks(f)
 
 Compute all bottlenecks of ``f``.
 """
 function bottlenecks(result::HC.Result, dim::Integer)
+    ncomplex = HC.nresults(result; only_nonsingular=true)
+    ncomplex = iseven(ncomplex) ? ncomplex : ncomplex + 1
+    @info "Number of compluted complex bottlenecks: $(ncomplex)"
     real_sols = HC.real_solutions(result; only_nonsingular=true)
+    @info "Number of real bottlenecks: $(length(real_sols))"
     duplicate_coordinates = map(s -> s[1:2*dim], real_sols)
     relabel = s -> [s[dim+1:2dim]; s[1:dim]]
     points = HC.unique_points(duplicate_coordinates; group_action=relabel)
@@ -35,6 +38,7 @@ end
 bottlenecks(f::DP.AbstractPolynomial; kwargs...) = bottlenecks([f]; kwargs...)
 function bottlenecks(f::Vector{<:DP.AbstractPolynomial}; kwargs...)
     n = DP.nvariables(f)
+    @info "Computing bottlenecks..."
     res = HC.solve(bottleneck_equations(f); kwargs...)
     bottlenecks(res, n)
 end
@@ -74,7 +78,7 @@ function visualize_bottlenecks!(scene, bn_pts::Vector{<:NTuple{2}}; only_minimal
     for i in 1:n_min_bn
         p, q = bn_pts[bn_distance_sort_ind[i]]
         # scatter!(scene, [p[1], q[1]], [p[2], q[2]], markersize=w*0.01, color=:INDIANRED, show_axis=false)
-        linesegments!(scene, [to_point_pair(p,q)], linewidth=7.5, color=:INDIANRED, show_axis=false)
+        linesegments!(scene, [to_point_pair(p,q)], linewidth=4, color=:INDIANRED, show_axis=false)
     end
     scene
 end
